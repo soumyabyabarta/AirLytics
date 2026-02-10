@@ -1,0 +1,121 @@
+<svg width="100%" height="520" viewBox="0 0 1000 520"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e6f9f6"/>
+      <stop offset="100%" stop-color="#f0fffd"/>
+    </linearGradient>
+
+    <!-- AQI Gradient -->
+    <linearGradient id="aqiGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="25%" stop-color="#84cc16"/>
+      <stop offset="50%" stop-color="#facc15"/>
+      <stop offset="75%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+
+    <style>
+      .title { font: bold 24px sans-serif; fill: #0f766e; }
+      .subtitle { font: 14px sans-serif; fill: #065f46; }
+      .label { font: 13px sans-serif; fill: #134e4a; }
+      .value { font: bold 15px sans-serif; fill: #022c22; }
+
+      .pulse { animation: pulse 2s infinite; }
+      .slide { animation: slide 6s infinite; }
+
+      @keyframes pulse {
+        0% { opacity: 0.6; }
+        50% { opacity: 1; }
+        100% { opacity: 0.6; }
+      }
+
+      @keyframes slide {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(120px); }
+        100% { transform: translateX(0); }
+      }
+
+      @keyframes season {
+        0%   { opacity: 1; }
+        33%  { opacity: 0; }
+        66%  { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes season2 {
+        0%   { opacity: 0; }
+        33%  { opacity: 1; }
+        66%  { opacity: 0; }
+        100% { opacity: 0; }
+      }
+
+      @keyframes season3 {
+        0%   { opacity: 0; }
+        33%  { opacity: 0; }
+        66%  { opacity: 1; }
+        100% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="520" rx="24" fill="url(#bg)" stroke="#14b8a6"/>
+
+  <!-- Header -->
+  <text x="30" y="40" class="title">🌍 AirLytics – Intelligent AQI Dashboard</text>
+  <text x="30" y="64" class="subtitle">ML • Explainable AI • Weather-Reactive • Deployed</text>
+
+  <!-- AQI Gauge -->
+  <circle cx="150" cy="210" r="80" fill="#ccfbf1" stroke="#14b8a6" stroke-width="4"/>
+  <text x="120" y="195" class="label">AQI</text>
+  <text x="120" y="230" class="value pulse">152</text>
+  <text x="110" y="260" class="label">Moderate</text>
+
+  <!-- AQI Scale -->
+  <rect x="80" y="290" width="140" height="10" rx="5" fill="url(#aqiGrad)"/>
+
+  <!-- 🔁 Season Animation -->
+  <text x="300" y="110" class="label">🗓 Season</text>
+  <text x="420" y="110" class="value" style="animation: season 9s infinite;">❄️ Winter</text>
+  <text x="420" y="110" class="value" style="animation: season2 9s infinite;">☀️ Summer</text>
+  <text x="420" y="110" class="value" style="animation: season3 9s infinite;">🌧 Monsoon</text>
+
+  <!-- Weather -->
+  <text x="300" y="150" class="label">🌡 Temp</text>
+  <text x="420" y="150" class="value">32°C</text>
+
+  <text x="300" y="180" class="label">💧 Humidity</text>
+  <text x="420" y="180" class="value">68%</text>
+
+  <text x="300" y="210" class="label">🌬 Wind</text>
+  <text x="420" y="210" class="value">4.6 m/s</text>
+
+  <!-- 🗺️ State Heat Strip -->
+  <text x="30" y="350" class="label">🗺️ State-wise AQI Intensity</text>
+  <rect x="30" y="365" width="260" height="14" rx="7" fill="#e5e7eb"/>
+  <rect x="30" y="365" width="180" height="14" rx="7" fill="url(#aqiGrad)" class="slide"/>
+  <text x="300" y="377" class="value">West Bengal → Delhi → Bihar</text>
+
+  <!-- 🧠 SHAP Feature Contributions -->
+  <text x="620" y="110" class="label">🧠 SHAP Feature Impact</text>
+
+  <text x="620" y="140" class="label">PM2.5</text>
+  <rect x="700" y="130" width="140" height="10" rx="5" fill="#ef4444"/>
+
+  <text x="620" y="165" class="label">CO</text>
+  <rect x="700" y="155" width="90" height="10" rx="5" fill="#f97316"/>
+
+  <text x="620" y="190" class="label">Wind Speed</text>
+  <rect x="700" y="180" width="60" height="10" rx="5" fill="#22c55e"/>
+
+  <text x="620" y="215" class="label">Humidity</text>
+  <rect x="700" y="205" width="70" height="10" rx="5" fill="#0ea5e9"/>
+
+  <!-- Footer -->
+  <text x="30" y="490" class="subtitle">
+    Visual ML Intelligence • Pollutants + Weather + Time • GitHub-Native Dashboard
+  </text>
+</svg>

@@ -1,0 +1,48 @@
+<svg width="800" height="220" viewBox="0 0 800 220"
+  xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="800" height="220" fill="#ffffff"/>
+
+  <text x="400" y="28" text-anchor="middle"
+    font-size="20" font-weight="bold"
+    fill="#F97316">
+    AirLytics – Live AQI Simulation
+  </text>
+
+  <!-- AQI bar background -->
+  <rect x="150" y="80" width="500" height="25" rx="12" fill="#e5e7eb"/>
+
+  <!-- Animated AQI bar -->
+  <rect x="150" y="80" width="120" height="25" rx="12" fill="#22c55e">
+    <animate attributeName="width"
+      values="120;260;420;180;120"
+      dur="6s"
+      repeatCount="indefinite" />
+    <animate attributeName="fill"
+      values="#22c55e;#facc15;#f97316;#ef4444;#22c55e"
+      dur="6s"
+      repeatCount="indefinite" />
+  </rect>
+
+  <!-- Labels -->
+  <text x="150" y="120" font-size="12">Good</text>
+  <text x="280" y="120" font-size="12">Moderate</text>
+  <text x="420" y="120" font-size="12">Poor</text>
+  <text x="580" y="120" font-size="12">Severe</text>
+
+  <!-- Pollution particles -->
+  <circle cx="120" cy="165" r="5" fill="#9ca3af">
+    <animate attributeName="cx" from="120" to="680"
+      dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="200" cy="175" r="4" fill="#6b7280">
+    <animate attributeName="cx" from="200" to="650"
+      dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="400" y="200" text-anchor="middle"
+    font-size="14" fill="#374151">
+    Predicting AQI using Pollutants + Weather + Time
+  </text>
+</svg>
