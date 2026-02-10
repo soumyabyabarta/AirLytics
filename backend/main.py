@@ -1,5 +1,4 @@
 import os
-import pickle
 import joblib
 import pandas as pd
 import requests
@@ -20,29 +19,19 @@ app.add_middleware(
 )
 
 # ---------------------------------------------------------
-#  Load Models Directly (Supporting both .json and .pkl)
+# Load the New Retrained Model (aqi_model.pkl)
 # ---------------------------------------------------------
-MODEL_FILENAME_JSON = 'xgb_model.json'
-MODEL_FILENAME_PKL = 'aqi_model.pkl'
-
+MODEL_FILENAME = 'aqi_model.pkl'
 model = None
 
 try:
-    # Try loading JSON first (as per previous logs)
-    if os.path.exists(MODEL_FILENAME_JSON):
-        with open(MODEL_FILENAME_JSON, "rb") as f:
-            model = pickle.load(f)
-        print(f"Model Loaded Successfully from {MODEL_FILENAME_JSON}!")
-    # Fallback to PKL if JSON missing
-    elif os.path.exists(MODEL_FILENAME_PKL):
-        model = joblib.load(MODEL_FILENAME_PKL)
-        print(f"Model Loaded Successfully from {MODEL_FILENAME_PKL}!")
+    if os.path.exists(MODEL_FILENAME):
+        model = joblib.load(MODEL_FILENAME)
+        print(f"✅ Model Loaded Successfully from {MODEL_FILENAME}!")
     else:
-        print("Error: No model file found! Check Git LFS setup.")
-
+        print(f"❌ Error: {MODEL_FILENAME} not found on server!")
 except Exception as e:
-    print(f"Critical Error loading model: {e}")
-    model = None
+    print(f"❌ Critical Error loading model: {e}")
 
 # Define Input Structure
 class AQIRequest(BaseModel):
@@ -79,7 +68,7 @@ CITY_COORDS = {
 
 @app.get("/")
 def home():
-    return {"message": "AirLytics Backend is Live & Running!"}
+    return {"message": "AirLytics Backend is Live & Running with 90% Accuracy Model!"}
 
 # Endpoint: Get Live Temperature
 @app.get("/weather/{state_name}")
@@ -115,24 +104,15 @@ def predict_aqi(data: AQIRequest):
 
     try:
         # ---------------------------------------------------------
-        # FIX: Matching features exactly with Model Training Data
+        # UPDATED: Using ONLY the 6 features from the retrained model
         # ---------------------------------------------------------
-        # The model was trained with: PM2.5, PM10, NO, NO2, NOx, NH3, CO, SO2, O3, Benzene, Toluene, Xylene
-        # But NOT with Month or State_Code.
-        
         features = pd.DataFrame([{
             'PM2.5': data.pm25,
             'PM10': data.pm10,
-            'NO': 0.0,             # Missing feature filled with 0
             'NO2': data.no2,
-            'NOx': 0.0,            # Missing feature filled with 0
-            'NH3': 0.0,            # Missing feature filled with 0
             'CO': data.co,
             'SO2': data.so2,
-            'O3': data.o3,
-            'Benzene': 0.0,        # Missing feature filled with 0
-            'Toluene': 0.0,        # Missing feature filled with 0
-            'Xylene': 0.0          # Missing feature filled with 0
+            'O3': data.o3
         }])
         
         # Predict
