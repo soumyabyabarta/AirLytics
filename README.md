@@ -1,4 +1,4 @@
-# 🌍 AirLytics – Smart Air Quality Prediction System
+#  AirLytics – Smart Air Quality Prediction System
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=22&duration=2800&pause=800&color=F97316&center=true&vCenter=true&width=700&lines=Predicting+Air+Quality+with+Machine+Learning;Analyzing+Pollutants+%26+Weather+Data;Explainable+AI+using+SHAP;Deployed+on+Render+%26+Netlify;Production+Ready+Environmental+Intelligence" />
 </p>
@@ -7,11 +7,11 @@
 
 ![AirLytics AQI Simulation](assets/airlytics-simulation.svg)
 
-## 🔄 Automation Stats
+##  Automation Stats
 
 - **AQI Pipeline Runs:** <!--RUN_COUNT-->0<!--/RUN_COUNT-->
 
-## 📊 Intelligent AQI Dashboard (Animated Mock)
+##  Intelligent AQI Dashboard (Animated Mock)
 
 ![AirLytics Dashboard](assets/airlytics-dashboard-advanced.svg)
 
@@ -24,7 +24,7 @@ AirLytics is an **end-to-end Machine Learning and Data Analytics platform** desi
 The system transforms raw environmental data into **actionable insights** through predictive modeling, explainable AI (XAI), and full-stack cloud deployment.
 
 ---
-## 🔍 Project Overview
+##  Project Overview
 
 Air pollution poses a critical threat to public health and environmental sustainability.
 **AirLytics** addresses this challenge by providing a **predictive, interpretable, and scalable AQI forecasting system** that supports:
@@ -45,23 +45,23 @@ Unlike traditional reactive systems, AirLytics is **predictive-first**, explaina
 | Backend API        | Render       |
 | Frontend Dashboard | Netlify      |
 
-✅ Fully deployed, cloud-hosted, and production-ready
+ Fully deployed, cloud-hosted, and production-ready
 
 ---
 
-## 📌 Key Features
+##  Key Features
 
-* 🔢 AQI Prediction (Regression)
-* 🏷️ AQI Category Classification (Good → Severe)
-* 🌦️ Pollutant + Weather + Temporal Modeling
-* 🧠 Explainable AI using SHAP
-* 📊 Advanced Environmental Visual Analytics
-* ☁️ Cloud-Deployed Backend & Frontend
-* 🏗️ Scalable & Modular Architecture
+* AQI Prediction (Regression)
+*  AQI Category Classification (Good → Severe)
+*  Pollutant + Weather + Temporal Modeling
+*  Explainable AI using SHAP
+* Advanced Environmental Visual Analytics
+*  Cloud-Deployed Backend & Frontend
+*  Scalable & Modular Architecture
 
 ---
 
-## 🧠 Problem Statement
+##  Problem Statement
 
 AQI variation depends on:
 
@@ -76,7 +76,7 @@ AQI variation depends on:
 * Poor interpretability
 * Weak handling of extreme pollution events
 
-### 🎯 Objective
+###  Objective
 
 To design a **machine learning–based AQI prediction system** that is:
 
@@ -87,11 +87,11 @@ To design a **machine learning–based AQI prediction system** that is:
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 AirLytics follows a **three-tier client–server architecture**:
 
-### 1️⃣ Machine Learning Layer (Google Colab)
+### 1️ Machine Learning Layer (Google Colab)
 
 * Data cleaning & preprocessing
 * Feature engineering
@@ -99,13 +99,13 @@ AirLytics follows a **three-tier client–server architecture**:
 * Explainability using SHAP
 * Model versioning
 
-### 2️⃣ Backend Layer (Render)
+### 2️Backend Layer (Render)
 
 * REST API (FastAPI / Flask)
 * Model inference endpoints
 * JSON-based communication
 
-### 3️⃣ Frontend Layer (Netlify)
+### 3️ Frontend Layer (Netlify)
 
 * Interactive AQI dashboards
 * Charts, gauges & streamgraphs
@@ -113,9 +113,9 @@ AirLytics follows a **three-tier client–server architecture**:
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
-### 🔬 Machine Learning & Data Science
+###  Machine Learning & Data Science
 
 * Python
 * Pandas, NumPy
@@ -123,7 +123,7 @@ AirLytics follows a **three-tier client–server architecture**:
 * Random Forest Regressor & Classifier
 * SHAP (Explainable AI)
 
-### 📊 Data Visualization
+###  Data Visualization
 
 * Matplotlib
 * Seaborn
@@ -131,13 +131,13 @@ AirLytics follows a **three-tier client–server architecture**:
 * Streamgraphs
 * Feature Relationship Network Graphs
 
-### ⚙️ Backend
+###  Backend
 
 * FastAPI / Flask
 * REST APIs
 * Render (Cloud Hosting)
 
-### 🎨 Frontend
+###  Frontend
 
 * HTML, CSS, JavaScript / React
 * Interactive dashboards
@@ -145,7 +145,7 @@ AirLytics follows a **three-tier client–server architecture**:
 
 ---
 
-## 📂 Dataset Overview
+##  Dataset Overview
 
 * **Type:** State-wise AQI Dataset (India)
 * **Size:** ~29,000+ records
@@ -153,16 +153,16 @@ AirLytics follows a **three-tier client–server architecture**:
 
 ### Feature Categories
 
-**🌫️ Pollutants**
+** Pollutants**
 PM2.5, PM10, NO, NO₂, NOx, SO₂, CO, O₃, Benzene, Toluene, Xylene
 
-**🌦️ Weather**
+** Weather**
 Temperature, Humidity, Wind Speed
 
-**⏳ Temporal**
+** Temporal**
 Year, Month, Season
 
-**🗺️ Categorical**
+** Categorical**
 State
 
 ### Target Variables
@@ -172,7 +172,7 @@ State
 
 ---
 
-## ⚙️ Data Preprocessing
+##  Data Preprocessing
 
 * Missing value handling (KNN & statistical imputation)
 * Date-time parsing & chronological sorting
@@ -182,21 +182,28 @@ State
 
 ---
 
-## 🤖 Machine Learning Models
+##  Machine Learning Models
 
-### 🔹 Random Forest Regressor
+###  Random Forest Regressor
 
 * Predicts continuous AQI values
 * Handles non-linear relationships
 * Robust to noise
 * Built-in feature importance
 
-### 🔹 Random Forest Classifier
+###  Random Forest Classifier
 
 * Predicts AQI categories
 * Handles class imbalance
 * Stable generalization
 
+  > XGBoost
+
+Improved predictive accuracy
+
+Better generalization
+
+Optimized model size (~3MB)
 ### Why Random Forest?
 
 * Excellent for tabular environmental data
@@ -223,7 +230,7 @@ State
 
 ---
 
-## 🔍 Feature Importance & Explainability
+##  Feature Importance & Explainability
 
 ### Top AQI Contributors
 
@@ -242,7 +249,7 @@ Enhances **model transparency, trust, and interpretability**.
 
 ---
 
-## ⚠️ Extreme AQI Optimization
+##  Extreme AQI Optimization
 
 * Sample weighting for high AQI values
 * Improves prediction accuracy during severe pollution events
@@ -250,7 +257,7 @@ Enhances **model transparency, trust, and interpretability**.
 
 ---
 
-## 📊 Advanced Analytics
+##  Advanced Analytics
 
 * State-wise AQI distribution charts
 * AQI gauge visualizations
@@ -261,7 +268,7 @@ These analytics extend the system beyond prediction into **decision-support inte
 
 ---
 
-## 🌐 Deployment Details
+##  Deployment Details
 
 | Component   | Platform     |
 | ----------- | ------------ |
@@ -271,7 +278,7 @@ These analytics extend the system beyond prediction into **decision-support inte
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 * Real-time AQI prediction
 * IoT sensor integration
@@ -281,7 +288,7 @@ These analytics extend the system beyond prediction into **decision-support inte
 
 ---
 
-## ⚠️ Known Limitations
+##  Known Limitations
 
 * Reduced accuracy during rare weather anomalies
 * No real-time sensor data integration
@@ -289,7 +296,7 @@ These analytics extend the system beyond prediction into **decision-support inte
 
 ---
 
-## 🌍 Real-World Impact Scenarios
+##  Real-World Impact Scenarios
 
 * Government air quality monitoring
 * Hospital preparedness for pollution-driven health risks
@@ -298,7 +305,7 @@ These analytics extend the system beyond prediction into **decision-support inte
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 AirLytics-Smart-AQI-Prediction/
@@ -335,7 +342,7 @@ AirLytics-Smart-AQI-Prediction/
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
 **Haldia Institute of Technology**
 *B.Tech – Information Technology (2025–2026)*
@@ -349,14 +356,13 @@ AirLytics-Smart-AQI-Prediction/
 
 ---
 
-## 🔗 Project Links
+##  Project Links
 
-* 🌐 **Live Website:** [https://airlytics-live.netlify.app/](https://airlytics-live.netlify.app/)
-* 📦 **Trained Models:** [https://drive.google.com/drive/folders/1iz37PWSSoX3w1msNU6wlximhbiXiKPe5](https://drive.google.com/drive/folders/1iz37PWSSoX3w1msNU6wlximhbiXiKPe5)
-* 📝 **Project Documentation:** Notion case study link (Good Evening Sir,
+*  **Live Website:** [https://airlytics-live.netlify.app/](https://airlytics-live.netlify.app/)
+*  **Project Documentation:** Notion case study link (Good Evening Sir,
 Sharing the details of our project, AirLytics.
-🔗 Website: https://airlytics-live.netlify.app/
-📝 Notion Docs: https://www.notion.so/Development-Project-Report-300d95488c2780f19e29dba528835e78?source=copy_link)
+   Website: https://airlytics-live.netlify.app/
+   otion Docs: https://www.notion.so/Development-Project-Report-300d95488c2780f19e29dba528835e78?source=copy_link)
 
 ---
 
