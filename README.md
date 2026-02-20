@@ -3,7 +3,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?size=22&duration=2800&pause=800&color=F97316&center=true&vCenter=true&width=700&lines=Predicting+Air+Quality+with+Machine+Learning;Analyzing+Pollutants+%26+Weather+Data;Explainable+AI+using+SHAP;Deployed+on+Render+%26+Netlify;Production+Ready+Environmental+Intelligence" />
 </p>
 
-## 🎮 Live AQI Mini Simulation
+##  Live AQI Mini Simulation
 
 ![AirLytics AQI Simulation](assets/airlytics-simulation.svg)
 
@@ -37,7 +37,7 @@ Unlike traditional reactive systems, AirLytics is **predictive-first**, explaina
 
 ---
 
-## 🚀 Live Project Architecture
+##  Live Project Architecture
 
 | Layer              | Platform     |
 | ------------------ | ------------ |
@@ -212,7 +212,7 @@ Optimized model size (~3MB)
 
 ---
 
-## 📈 Model Evaluation
+##  Model Evaluation
 
 ### Regression Metrics
 
@@ -366,11 +366,11 @@ Sharing the details of our project, AirLytics.
 
 ---
 
-## 📜 License
+##  License
 ![MIT License](https://img.shields.io/badge/License-MIT-00FFCC?style=plastic)
 
 ---
-## 📧 Contact Us
+##  Contact Us
 
 For queries, collaboration, or feedback, feel free to reach out:
 
@@ -429,7 +429,7 @@ It demonstrates:
 ![Deployment](https://img.shields.io/badge/Deployed-Render%20%7C%20Netlify-purple)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 
-### ☕ Support & Contributions
+###  Support & Contributions
 
 If you find **AirLytics** useful or inspiring, consider supporting the project:
 
